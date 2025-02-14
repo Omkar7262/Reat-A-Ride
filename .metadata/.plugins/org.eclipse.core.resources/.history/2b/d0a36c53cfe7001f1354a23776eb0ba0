@@ -1,0 +1,12 @@
+package com.rentalcar.dao;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.rentalcar.pojos.Car;
+
+public interface CarDao extends JpaRepository<Car, Long> {
+
+	List<Car> findByStatus(String status);
+}
